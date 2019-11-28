@@ -147,8 +147,8 @@ class ShowViewController: UIViewController {
         }else{
             timer!.invalidate()
         }
-        
     }
+    
     func autoDisplayImage(){
         
         dateSlider.value = Float(autoNumber)

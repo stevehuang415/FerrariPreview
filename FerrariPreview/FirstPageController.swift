@@ -17,7 +17,18 @@ class FirstPageController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-   
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        super.viewWillDisappear(animated)
+    }
+    
     /*
      // MARK: - Navigation
      
