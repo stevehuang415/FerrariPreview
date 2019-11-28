@@ -1,24 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xdd-Vx-dJV">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First Page Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="dark" id="BYZ-38-t0r" customClass="FirstPageController" customModule="FerrariPreview" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FerrariLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-zQ-snx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-cn-AXM">
+                                <rect key="frame" x="112.66666666666669" y="667" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="drv-0d-79s"/>
+                                    <constraint firstAttribute="width" constant="150" id="qAh-5Q-TfO"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Let's Start">
+                                            <attributes>
+                                                <font key="NSFont" size="25" name="GillSans"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="Nj7-VU-EMb" kind="show" id="2vO-sh-kLO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XK1-zQ-snx" firstAttribute="leading" secondItem="MSf-R9-BBv" secondAttribute="leading" id="14h-Uk-hDL"/>
+                            <constraint firstItem="dKl-cn-AXM" firstAttribute="centerX" secondItem="MSf-R9-BBv" secondAttribute="centerX" id="IlT-1e-O1G"/>
+                            <constraint firstItem="MSf-R9-BBv" firstAttribute="trailing" secondItem="XK1-zQ-snx" secondAttribute="trailing" id="aJe-GW-RS3"/>
+                            <constraint firstAttribute="bottom" secondItem="XK1-zQ-snx" secondAttribute="bottom" id="d69-T4-ycS"/>
+                            <constraint firstItem="MSf-R9-BBv" firstAttribute="bottom" secondItem="dKl-cn-AXM" secondAttribute="bottom" constant="77" id="edc-WK-TVs"/>
+                            <constraint firstItem="XK1-zQ-snx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yI6-Qu-pV5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MSf-R9-BBv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="psj-Fc-Mzv"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1218" y="92"/>
+        </scene>
+        <!--ShowViewController-->
+        <scene sceneID="ut3-B8-I7u">
+            <objects>
+                <viewController id="Nj7-VU-EMb" userLabel="ShowViewController" customClass="ShowViewController" customModule="FerrariPreview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ipS-sj-azA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bo-cv-KtV">
+                                <rect key="frame" x="0.0" y="298" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="OWu-sn-TeV"/>
+                                    <constraint firstAttribute="height" constant="216" id="vUW-pY-RJa"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="266342400.54901302">
+                                    <!--2009-06-10 16:00:00 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="266342400">
+                                    <!--2009-06-10 16:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="602265600">
+                                    <!--2020-02-01 16:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="SelectDate:" destination="Nj7-VU-EMb" eventType="valueChanged" id="mdV-gr-Iqg"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lbael" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-Og-uXM">
+                                <rect key="frame" x="62.666666666666657" y="667" width="249.99999999999997" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0VZ-Eg-d2V"/>
+                                    <constraint firstAttribute="width" constant="250" id="q68-1c-S9g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="20090611" translatesAutoresizingMaskIntoConstraints="NO" id="qR7-Gs-LmI">
+                                <rect key="frame" x="0.0" y="88" width="375" height="214"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="9aE-zu-XZJ">
+                                <rect key="frame" x="78" y="522" width="219" height="61"/>
+                                <connections>
+                                    <action selector="SelectSlider:" destination="Nj7-VU-EMb" eventType="valueChanged" id="fBV-RU-VjV"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rzn-FJ-Bgs">
+                                <rect key="frame" x="232" y="757" width="128.33333333333337" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Auto play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNn-fC-WCy">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.333333333333329" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dE5-9x-GyJ">
+                                        <rect key="frame" x="79.333333333333314" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="autoDisplay:" destination="Nj7-VU-EMb" eventType="valueChanged" id="1zF-7D-DoG"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9aE-zu-XZJ" firstAttribute="top" secondItem="qR7-Gs-LmI" secondAttribute="bottom" constant="220" id="0wM-VR-hag"/>
+                            <constraint firstItem="qR7-Gs-LmI" firstAttribute="leading" secondItem="00a-WD-HrY" secondAttribute="leading" id="2Kv-nk-1b1"/>
+                            <constraint firstAttribute="bottom" secondItem="rzn-FJ-Bgs" secondAttribute="bottom" constant="24" id="7YV-o3-kRd"/>
+                            <constraint firstItem="00a-WD-HrY" firstAttribute="trailing" secondItem="rzn-FJ-Bgs" secondAttribute="trailing" constant="14.67" id="GF9-y9-NgW"/>
+                            <constraint firstItem="qR7-Gs-LmI" firstAttribute="trailing" secondItem="00a-WD-HrY" secondAttribute="trailing" id="Mfj-EA-OJP"/>
+                            <constraint firstItem="bqB-Og-uXM" firstAttribute="centerX" secondItem="00a-WD-HrY" secondAttribute="centerX" id="QtC-OJ-bOb"/>
+                            <constraint firstItem="8bo-cv-KtV" firstAttribute="trailing" secondItem="00a-WD-HrY" secondAttribute="trailing" id="S7K-5j-eR6"/>
+                            <constraint firstItem="8bo-cv-KtV" firstAttribute="centerX" secondItem="ipS-sj-azA" secondAttribute="centerX" id="Wel-Yb-Swa"/>
+                            <constraint firstItem="8bo-cv-KtV" firstAttribute="top" secondItem="00a-WD-HrY" secondAttribute="top" constant="210" id="b1Q-vI-7kk"/>
+                            <constraint firstItem="qR7-Gs-LmI" firstAttribute="top" secondItem="00a-WD-HrY" secondAttribute="top" id="cvO-WN-J27"/>
+                            <constraint firstItem="rzn-FJ-Bgs" firstAttribute="top" secondItem="bqB-Og-uXM" secondAttribute="bottom" constant="56" id="dDO-1Y-bhi"/>
+                            <constraint firstItem="8bo-cv-KtV" firstAttribute="leading" secondItem="00a-WD-HrY" secondAttribute="leading" id="eOu-JB-Luz"/>
+                            <constraint firstItem="rzn-FJ-Bgs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="00a-WD-HrY" secondAttribute="leading" constant="232" id="eaR-fw-itN"/>
+                            <constraint firstItem="bqB-Og-uXM" firstAttribute="top" secondItem="9aE-zu-XZJ" secondAttribute="bottom" constant="85" id="eo6-IC-5cM"/>
+                            <constraint firstItem="9aE-zu-XZJ" firstAttribute="top" secondItem="8bo-cv-KtV" secondAttribute="bottom" constant="8" id="hUo-01-jhA"/>
+                            <constraint firstItem="qR7-Gs-LmI" firstAttribute="centerX" secondItem="ipS-sj-azA" secondAttribute="centerX" id="imO-qN-N8g"/>
+                            <constraint firstItem="9aE-zu-XZJ" firstAttribute="leading" secondItem="00a-WD-HrY" secondAttribute="leading" constant="80" id="sf0-au-e2G"/>
+                            <constraint firstItem="00a-WD-HrY" firstAttribute="bottom" secondItem="bqB-Og-uXM" secondAttribute="bottom" constant="77" id="xcg-dc-C4B"/>
+                            <constraint firstItem="00a-WD-HrY" firstAttribute="trailing" secondItem="9aE-zu-XZJ" secondAttribute="trailing" constant="80" id="zYa-LJ-zwH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="00a-WD-HrY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F1u-82-yVW"/>
+                    <connections>
+                        <outlet property="autoStitch" destination="dE5-9x-GyJ" id="mLp-6g-lwZ"/>
+                        <outlet property="datePicker" destination="8bo-cv-KtV" id="FWD-5f-iX1"/>
+                        <outlet property="dateSlider" destination="9aE-zu-XZJ" id="dah-mF-olu"/>
+                        <outlet property="imageShow" destination="qR7-Gs-LmI" id="a3a-LM-SO5"/>
+                        <outlet property="nameLabel" destination="bqB-Og-uXM" id="iph-BI-y4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kv0-Wf-fFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041" y="92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nUu-pR-n6k">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDF-zQ-MKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="dark" id="Xdd-Vx-dJV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SnB-fp-WeE">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BjD-H3-zvu">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rF4-4I-Vbm"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="178" y="92"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="20090611" width="1920" height="1080"/>
+        <image name="FerrariLogo" width="998" height="1803"/>
+    </resources>
 </document>

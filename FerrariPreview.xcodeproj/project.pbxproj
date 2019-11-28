@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		1930BCC3238A2A0300624667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930BCC2238A2A0300624667 /* AppDelegate.swift */; };
 		1930BCC5238A2A0300624667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930BCC4238A2A0300624667 /* SceneDelegate.swift */; };
-		1930BCC7238A2A0300624667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930BCC6238A2A0300624667 /* ViewController.swift */; };
 		1930BCCA238A2A0300624667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930BCC8238A2A0300624667 /* Main.storyboard */; };
 		1930BCCC238A2A0500624667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1930BCCB238A2A0500624667 /* Assets.xcassets */; };
 		1930BCCF238A2A0500624667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930BCCD238A2A0500624667 /* LaunchScreen.storyboard */; };
+		1930BCD7238B704500624667 /* FirstPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930BCD6238B704500624667 /* FirstPageController.swift */; };
+		1930BCDD238CCEEB00624667 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930BCDC238CCEEB00624667 /* ShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1930BCBF238A2A0300624667 /* FerrariPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FerrariPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1930BCC2238A2A0300624667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1930BCC4238A2A0300624667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1930BCC6238A2A0300624667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1930BCC9238A2A0300624667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1930BCCB238A2A0500624667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1930BCCE238A2A0500624667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1930BCD0238A2A0500624667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1930BCD6238B704500624667 /* FirstPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageController.swift; sourceTree = "<group>"; };
+		1930BCDC238CCEEB00624667 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				1930BCC2238A2A0300624667 /* AppDelegate.swift */,
 				1930BCC4238A2A0300624667 /* SceneDelegate.swift */,
-				1930BCC6238A2A0300624667 /* ViewController.swift */,
 				1930BCC8238A2A0300624667 /* Main.storyboard */,
+				1930BCD6238B704500624667 /* FirstPageController.swift */,
 				1930BCCB238A2A0500624667 /* Assets.xcassets */,
 				1930BCCD238A2A0500624667 /* LaunchScreen.storyboard */,
 				1930BCD0238A2A0500624667 /* Info.plist */,
+				1930BCDC238CCEEB00624667 /* ShowViewController.swift */,
 			);
 			path = FerrariPreview;
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1930BCC7238A2A0300624667 /* ViewController.swift in Sources */,
+				1930BCDD238CCEEB00624667 /* ShowViewController.swift in Sources */,
 				1930BCC3238A2A0300624667 /* AppDelegate.swift in Sources */,
 				1930BCC5238A2A0300624667 /* SceneDelegate.swift in Sources */,
+				1930BCD7238B704500624667 /* FirstPageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
