@@ -16,36 +16,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FerrariLogo" translatesAutoresizingMaskIntoConstraints="NO" id="XK1-zQ-snx">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375.00000000000023" height="812"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-cn-AXM">
-                                <rect key="frame" x="112.66666666666669" y="667" width="150" height="34"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKl-cn-AXM">
+                                <rect key="frame" x="152.66666666666666" y="657" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="drv-0d-79s"/>
-                                    <constraint firstAttribute="width" constant="150" id="qAh-5Q-TfO"/>
+                                    <constraint firstAttribute="width" constant="70" id="Njc-AH-tn7"/>
+                                    <constraint firstAttribute="height" constant="70" id="uQx-fl-YiG"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Let's Start">
-                                            <attributes>
-                                                <font key="NSFont" size="25" name="GillSans"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="25"/>
+                                <state key="normal" image="enginebutton"/>
                                 <connections>
                                     <segue destination="Nj7-VU-EMb" kind="show" id="2vO-sh-kLO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="clip" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcM-d2-uKR">
+                                <rect key="frame" x="0.0" y="108" width="375" height="86"/>
+                                <color key="tintColor" red="0.79607087369999996" green="0.79607325790000005" blue="0.79607862230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Ferrari Preview">
+                                        <attributes>
+                                            <color key="NSColor" red="0.79607087369999996" green="0.79607325790000005" blue="0.79607862230000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="Copperplate"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XK1-zQ-snx" firstAttribute="leading" secondItem="MSf-R9-BBv" secondAttribute="leading" id="14h-Uk-hDL"/>
+                            <constraint firstItem="UcM-d2-uKR" firstAttribute="leading" secondItem="MSf-R9-BBv" secondAttribute="leading" id="Ben-Fe-2sj"/>
+                            <constraint firstItem="UcM-d2-uKR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I1U-rz-iH8"/>
                             <constraint firstItem="dKl-cn-AXM" firstAttribute="centerX" secondItem="MSf-R9-BBv" secondAttribute="centerX" id="IlT-1e-O1G"/>
+                            <constraint firstItem="MSf-R9-BBv" firstAttribute="bottom" secondItem="dKl-cn-AXM" secondAttribute="bottom" constant="51" id="P0l-zH-EL2"/>
+                            <constraint firstItem="UcM-d2-uKR" firstAttribute="top" secondItem="MSf-R9-BBv" secondAttribute="top" constant="20" id="Qpu-XG-8I3"/>
+                            <constraint firstItem="dKl-cn-AXM" firstAttribute="top" secondItem="UcM-d2-uKR" secondAttribute="bottom" constant="463" id="U7b-iR-8aQ"/>
+                            <constraint firstItem="MSf-R9-BBv" firstAttribute="trailing" secondItem="UcM-d2-uKR" secondAttribute="trailing" id="W69-0l-8oQ"/>
                             <constraint firstItem="MSf-R9-BBv" firstAttribute="trailing" secondItem="XK1-zQ-snx" secondAttribute="trailing" id="aJe-GW-RS3"/>
                             <constraint firstAttribute="bottom" secondItem="XK1-zQ-snx" secondAttribute="bottom" id="d69-T4-ycS"/>
-                            <constraint firstItem="MSf-R9-BBv" firstAttribute="bottom" secondItem="dKl-cn-AXM" secondAttribute="bottom" constant="77" id="edc-WK-TVs"/>
                             <constraint firstItem="XK1-zQ-snx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yI6-Qu-pV5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MSf-R9-BBv"/>
@@ -55,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1218" y="92"/>
+            <point key="canvasLocation" x="1216.8" y="91.625615763546804"/>
         </scene>
         <!--ShowViewController-->
         <scene sceneID="ut3-B8-I7u">
@@ -183,5 +194,6 @@
     <resources>
         <image name="20090611" width="1920" height="1080"/>
         <image name="FerrariLogo" width="998" height="1803"/>
+        <image name="enginebutton" width="447" height="448"/>
     </resources>
 </document>
